@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>	
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Video de una botella de agua en varios formatos video">
+	<meta name="author" content="Javier Vela">
+	<meta name="keywords" content="video, formatos, MP4,OGG,MOV,WEBM">
+	<!-- <link rel="stylesheet" href="css/estilos.css"> -->
+    <title>TAREA DIW06</title>
+	<style>
+	  figure {
+		align-items: center;
+		justify-content: center;
+	  }
+	  
+	  video {
+		width: 50%;
+		border: 2px solid black;
+	  }
+	</style>
+</head>
+<body>
+<header>
+	<h1 class="title">Ejercicio 4 de la tarea 6 de DIW</h1>
+</header>
+<main>
+	<div class="container">
+		<section id="titulo">
+			<cite>Javier Vela</cite>
+			<br>
+			<span>26 de Febrero de 2018</span>
+			<br><br>
+		</section>
+		<!--Para seleccionar un formato de video en función del navegador, 
+			puedes utilizar la etiqueta "source" con los atributos "src" y "type" para cada formato de video. -->
+		<section id="formatos_de_video">	
+			<h2>Formato MP4</h2>
+			<figure>
+				<video controls autoplay>
+				  <source src="videos/botella.mp4" type="video/mp4">
+				  Tu navegador no soporta el tag de video.
+				</video>
+				<figcaption>Video 'botella.mp4'.</figcaption>
+			</figure>	
+			<h2>Formato MOV</h2>
+			<figure>
+				<video controls>
+				  <source src="videos/botella.mov" type="video/quicktime">
+				  Tu navegador no soporta el tag de video.
+				</video>
+				<figcaption>Video 'botella.mov'.</figcaption>
+			</figure>
+			<h2>Formato OGG</h2>
+			<figure>
+				<video  controls>
+				  <source src="videos/botella.ogg" type="video/ogg">
+				  Tu navegador no soporta el tag de video o el codec OGG.
+				</video>
+				<figcaption>Video 'botella.ogg'.</figcaption>
+			</figure>
+			<h2>Formato WEBM</h2>
+			<figure>
+				<video  controls>
+				  <source src="videos/botella.webm" type="video/webm">
+				  Tu navegador no soporta el tag de video o el codec WEBM.
+				</video>
+				<figcaption>Video 'botella.webm'.</figcaption>
+			</figure>
+			<h2>Todos los formatos en un tag  de video</h2>
+			<p>Para utilizar los codecs mencionados en la etiqueta "video" de HTML5, puedes agregar la fuente de video utilizando la etiqueta "source" con el atributo "type" que especifique el tipo de archivo de video y los codecs correspondientes.</p>	
+			<figure>
+				<video controls poster="imagenes/botella.PNG">
+				  <source src="videos/botella.mov" type='video/quicktime; codecs="H.264, AAC"'>
+				  <source src="videos/botella.mp4" type='video/mp4; codecs="H.264, AAC"'>
+				  <source src="videos/botella.ogg" type='video/ogg; codecs="theora, vorbis"'>
+				  <source src="videos/botella.webm" type='video/webm; codecs="vp8, vorbis"'>
+				  Tu navegador no soporta el tag de video.
+				</video>
+				<figcaption>Botella de agua de 500ml de la marca AquaBona de color azul transparente con tapón azul oscuro agarrada por una mano que gira la botella hacia el lado derecho. Video de cuatro segundos..</figcaption>
+			</figure>
+			<p>En este ejemplo, se proporcionan cuatro fuentes de video diferentes para los formatos MOV, MP4, OGG y WebM, con los codecs correspondientes especificados en el atributo "codecs". El navegador seleccionará la primera fuente de video que pueda reproducir.</p>
+			<p>Es importante tener en cuenta que algunos navegadores no admiten todos los codecs de video. Por lo tanto, es recomendable proporcionar al menos dos fuentes de video diferentes en diferentes formatos y codecs para garantizar la compatibilidad con la mayoría de los navegadores.</p>
+		</section>
+	</div>
+</main>
+<footer id="footer">
+	<span>Trabajo realizado por Javier Vela Equiza. Asignatura: Desarrollo de Interfaces Web. Tarea 6</span>
+</footer>
+</body>
+</html>
